@@ -8,11 +8,11 @@ import Link from "next/link";
  * Client component due to interactive category cards
  */
 const categories = [
-  { name: "Action", img: "/action.svg" },
-  { name: "Adventure", img: "/adventure.svg" },
-  { name: "Comedy", img: "/comedy.svg" },
-  { name: "Drama", img: "/drama.svg" },
-  { name: "Horror", img: "/horror.svg" },
+  { name: "Action", img: "/action.png" },
+  { name: "Adventure", img: "/adventure.png" },
+  { name: "Comedy", img: "/comedy.png" },
+  { name: "Drama", img: "/drama.png" },
+  { name: "Horror", img: "/horror.png" },
 ];
 
 export default function CategorySection() {

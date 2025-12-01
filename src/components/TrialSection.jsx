@@ -11,7 +11,7 @@ export default function TrialSection() {
       <div
         className="py-20 px-8 max-w-5xl mx-auto rounded-xl flex flex-col md:flex-row justify-between items-center"
         style={{
-          backgroundImage: "url('/trial.svg')",
+          backgroundImage: "url('/trial.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

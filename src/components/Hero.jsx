@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <>
-      <section className="h-screen bg-[url('/headercontainer.svg')] bg-cover bg-center relative flex flex-col justify-end items-center">
+      <section className="h-screen bg-[url('/headercontainer.png')] bg-cover bg-center relative flex flex-col justify-end items-center">
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="z-10 max-w-2xl pt-32 text-center">
           <h1 className="text-5xl font-bold text-white mb-4">
