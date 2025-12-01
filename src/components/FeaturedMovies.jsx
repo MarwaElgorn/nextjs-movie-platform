@@ -13,7 +13,6 @@ import { useState, useEffect } from "react";
 export default function FeaturedMovies() {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const fetchFeatured = async () => {
@@ -30,18 +29,6 @@ export default function FeaturedMovies() {
 
     fetchFeatured();
   }, []);
-
-  // Filter movies based on search query (case-insensitive)
-  const filteredMovies = movies.filter((movie) => {
-    const query = searchQuery.toLowerCase().trim();
-    if (!query) return true;
-
-    const matchesTitle = movie.title?.toLowerCase().includes(query);
-    const matchesYear = movie.year?.toString().includes(query) || 
-                        movie.release_date?.slice(0, 4).includes(query);
-
-    return matchesTitle || matchesYear;
-  });
 
   return (
     <section
@@ -60,17 +47,6 @@ export default function FeaturedMovies() {
           </p>
         </div>
 
-        {/* Search Bar */}
-        <div className="mb-8">
-          <input
-            type="text"
-            placeholder="Search movies by title or year..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-3 bg-[#1A1A1A] text-white placeholder-gray-400 rounded-lg border border-gray-700 focus:outline-none focus:border-red-600 transition"
-          />
-        </div>
-
         {/* Movies Grid */}
         {isLoading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -81,16 +57,14 @@ export default function FeaturedMovies() {
               ></div>
             ))}
           </div>
-        ) : filteredMovies.length === 0 ? (
+        ) : movies.length === 0 ? (
           <div className="text-center py-12">
             <Film className="w-12 h-12 mx-auto text-gray-600 mb-4" />
-            <p className="text-gray-400">
-              {searchQuery ? `No movies found matching "${searchQuery}"` : "No movies available yet"}
-            </p>
+            <p className="text-gray-400">No movies available yet</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredMovies.map((movie) => (
+            {movies.map((movie) => (
               <Link key={movie.id} href={`/movies/${movie.id}`}>
                 <div className="group relative overflow-hidden rounded-lg bg-slate-800 aspect-[9/12] cursor-pointer">
                   {/* Poster Image */}
