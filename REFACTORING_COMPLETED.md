@@ -20,7 +20,6 @@ src/components/
 ├── AddToWishlistButton.jsx   (Client) - Wishlist toggle button
 ├── Toast.jsx                 (Client) - Global notifications
 ├── ConfirmModal.jsx          (Client) - Delete confirmation
-└── SearchBar.jsx             (Client) - Search input (if exists)
 ```
 
 ### Removed Duplicate

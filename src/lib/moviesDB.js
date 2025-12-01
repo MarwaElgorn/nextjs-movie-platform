@@ -1,7 +1,8 @@
 import fs from "fs";
 import path from "path";
 
-const filePath = path.join(process.cwd(), "src/data/movies.json");
+const filePath = path.join(process.cwd(), "src", "data", "movies.json");
+
 
 /**
  * Normalize movie object to ensure consistency
@@ -28,6 +29,7 @@ function normalizeMovie(movie) {
  * Read all movies from JSON file
  */
 export function readMovies() {
+  console.log("READING MOVIES.JSON FROM:", filePath);
   try {
     const data = fs.readFileSync(filePath, "utf-8");
     const movies = JSON.parse(data);

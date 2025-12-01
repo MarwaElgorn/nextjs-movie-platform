@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   turbo: {
-    enabled: false, 
+    enabled: false,
   },
 
   images: {
@@ -9,6 +9,10 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "image.tmdb.org",
+      },
+      {
+        protocol: "https",
+        hostname: "i.pinimg.com",
       },
     ],
   },

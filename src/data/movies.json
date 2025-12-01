@@ -39,19 +39,6 @@
     "adult": false
   },
   {
-    "id": 1161617,
-    "title": "Code 3",
-    "overview": "A burned-out paramedic tries to survive his last 24 hours on the job while training a new recruit.",
-    "poster": "/gIAYMDb5mIAeCAj76q1sRsKjkzo.jpg",
-    "poster_path": "/gIAYMDb5mIAeCAj76q1sRsKjkzo.jpg",
-    "backdrop_path": "/gIAYMDb5mIAeCAj76q1sRsKjkzo.jpg",
-    "release_date": "2025-09-12",
-    "year": "2025",
-    "vote_average": 7.2,
-    "popularity": 420,
-    "adult": false
-  },
-  {
     "id": 1096563,
     "title": "End of Loyalty",
     "overview": "When the head of a notorious crime family is murdered, his son Grant is hell bent on payback and the only person that can stop him from tearing the city apart and destroying himself in the process is his best friend and federal agent, Ray Rose.",
@@ -241,7 +228,7 @@
     "poster_path": "https://i.pinimg.com/1200x/d5/dd/7e/d5dd7e429ddf45b427e63a24d30a8de7.jpg",
     "backdrop_path": "",
     "release_date": "1990-11-25",
-    "year": "1996-11-25",
+    "year": "1996",
     "vote_average": 0,
     "popularity": 0,
     "adult": false
