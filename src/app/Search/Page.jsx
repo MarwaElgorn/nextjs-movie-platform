@@ -25,6 +25,10 @@ export default function SearchPage() {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  console.log("API_KEY FROM CONFIG:", API_KEY);
+console.log("BASE_URL FROM CONFIG:", BASE_URL);
+console.log("IMG_PATH FROM CONFIG:", IMG_PATH);
+
 
   const performSearch = useCallback(async (term) => {
     if (!term || !term.trim()) {
