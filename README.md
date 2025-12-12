@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+A complete movie platform built with Next.js.
+The project includes a public website and a protected admin dashboard.
+The code uses multiple rendering methods to match real production behavior.
+The structure is simple, clean, and ready to scale.
 
-## Getting Started
+Main Features
+Public Website
 
-First, run the development server:
+Featured movies
 
-```bash
+Movie details
+
+Instant client search
+
+Full TMDB search
+
+Wishlist page
+
+Loading and error states
+
+Image optimization
+
+Admin Dashboard
+
+Access is restricted to admin only.
+
+Email: admin@movie.app
+Password: admin123
+
+
+Admin can:
+
+Add movie
+
+Edit movie
+
+Delete movie
+
+Search movies
+
+View movies in a responsive table
+
+Logout
+
+Rendering Methods
+
+The project uses several rendering techniques to show control over Next.js.
+
+SSG for the Home page
+
+ISR for movie list updates
+
+SSR or ISR for movie details
+
+CSR for dashboard and search
+
+Server actions for secure operations
+
+Each page uses the rendering mode suitable for its purpose.
+
+Core Logic
+
+Local filtering for instant search
+
+TMDB search using URL queries
+
+Controlled data fetching
+
+ISR cache for movie details
+
+Protected routes for admin
+
+CRUD operations for movies
+
+Tech Stack
+
+Next.js 14
+
+React
+
+TailwindCSS
+
+TMDB API
+
+Next Image optimization
+
+Project Purpose
+
+This project demonstrates:
+
+Ability to build a full platform
+
+Understanding of rendering strategies
+
+Real dashboard experience
+
+API integration
+
+Clean and organized code
+
+Production-style architecture
+
+It works as a portfolio project for frontend development.
+
+Installation
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Environment Variables
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Create a .env.local file:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+NEXT_PUBLIC_TMDB_API_KEY=YOUR_KEY
+NEXT_PUBLIC_TMDB_BASE_URL=https://api.themoviedb.org/3
+NEXT_PUBLIC_TMDB_IMG=https://image.tmdb.org/t/p/w500
 
-## Learn More
+Future Enhancements
 
-To learn more about Next.js, take a look at the following resources:
+Real authentication
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+User accounts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Movie filters by genre
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Infinite scroll
