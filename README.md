@@ -192,3 +192,8 @@ This project demonstrates:
 - Production-style workflows  
 
 It is a strong portfolio project for frontend roles.
+## 🔗 Live Demo
+
+You can view the live version of the project here:
+
+👉 **https://nextjs-movie-platform.vercel.app/**
