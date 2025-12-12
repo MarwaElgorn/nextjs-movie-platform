@@ -1,161 +1,132 @@
-🎬 Next.js Movie Platform
+# Next.js Movie Platform
 
-A complete movie platform built with Next.js.
-The project includes a public UI, a protected admin dashboard, and multiple rendering patterns that reflect real production use.
+A complete movie platform built with Next.js.  
+The project includes a public UI, a protected admin dashboard, and multiple rendering methods used in real production workflows.
 
-📌 Table of Contents
+---
 
-Overview
+## Table of Contents
 
-Features
+- Overview  
+- Features  
+- Rendering Strategy  
+- Public UI  
+- Admin Dashboard  
+- Core Logic  
+- Tech Stack  
+- Project Structure  
+- Installation  
+- Environment Variables  
+- Future Enhancements  
+- Project Purpose  
 
-Rendering Strategy
+---
 
-Public UI
+## Overview
 
-Admin Dashboard
+This project delivers a movie platform with:
 
-Core Logic
+- A cinematic public interface  
+- A secure admin dashboard  
+- CRUD operations for movies  
+- Multiple rendering techniques in Next.js  
 
-Tech Stack
+The structure is clean, scalable, and optimized for real-world use.
 
-Project Structure
+---
 
-Installation
+## Features
 
-Environment Variables
+### Public Interface
+- Featured movies  
+- Movie details page  
+- Instant search in the Home page  
+- TMDB search with API queries  
+- Wishlist page  
+- Loading and error handling  
+- Image optimization  
 
-Future Enhancements
+### Admin Dashboard
 
-Project Purpose
+Admin-only access using a simple session system.
 
-📝 Overview
-
-This project delivers a full movie platform with:
-
-A cinematic public interface
-
-A secure admin dashboard
-
-CRUD operations for movies
-
-Multiple rendering techniques (SSG, ISR, CSR, SSR)
-
-It showcases clean structure, reusable components, and production-style architecture.
-
-🚀 Features
-Public Interface
-
-Featured movies
-
-Movie details
-
-Instant search in Home
-
-Full TMDB search
-
-Wishlist page
-
-Error and loading states
-
-Image optimization
-
-Admin Dashboard
-
-Access is restricted to the admin only.
-
+```
 Email: admin@movie.app
 Password: admin123
+```
 
+Admin abilities:
+- Add movie  
+- Edit movie  
+- Delete movie  
+- Search movies  
+- View movies in a responsive table  
+- Logout  
 
-Admin can:
+---
 
-Add movie
+## Rendering Strategy
 
-Edit movie
+| Feature | Method | Why |
+|--------|--------|------|
+| Home Page | SSG | Faster static delivery |
+| Movies List | ISR | Auto-refresh pages |
+| Movie Details | ISR / SSR | Dynamic content |
+| Search Page | CSR | Instant updates |
+| Dashboard | CSR | Protected area |
+| Server Actions | Server | Secure operations |
 
-Delete movie
+---
 
-Search inside dashboard
+## Public UI
 
-View data in a responsive table
+- Movie grid with dynamic data  
+- Movie details layout  
+- Search that updates instantly  
+- TMDB API integration  
+- Fully responsive design  
+- Image optimization using `next/image`  
 
-Logout
+---
 
-⚙️ Rendering Strategy
+## Admin Dashboard
 
-This project uses several rendering methods to show control over Next.js.
+The dashboard simulates a real production admin panel.
 
-Feature	Method	Reason
-Home Page	SSG	Fast and static
-Movies List	ISR	Periodic updates
-Movie Details	ISR / SSR	Dynamic data
-Search Page	CSR	Instant search
-Dashboard	CSR	Protected route
-Server actions	Server	Secure operations
-🎨 Public UI
+- Login system  
+- Role-based access  
+- Local session stored in browser  
+- Protected routes  
+- CRUD operations  
+- Error and validation handling  
+- Responsive tables  
 
-The UI includes:
+---
 
-Movie grid display
+## Core Logic
 
-Details page with metadata
+- Local filtering for fast search  
+- URL-based TMDB search  
+- ISR caching for movie details  
+- Secure server actions  
+- Protected routes using redirects  
+- Modular structure for reusability  
 
-Client filtering
+---
 
-URL-based TMDB search
+## Tech Stack
 
-Responsive layout
+- Next.js 14  
+- React  
+- TailwindCSS  
+- TMDB API  
+- Next Image Optimization  
 
-Optimized images
+---
 
-Loading and error handling
+## Project Structure
 
-🔐 Admin Dashboard
-
-The dashboard is built to simulate real admin systems.
-
-Login with role-based access
-
-Protected routes using local session
-
-CRUD operations fully functional
-
-Live search in the dashboard
-
-Form validation and error handling
-
-Responsive table for movie data
-
-🧩 Core Logic
-
-Key logic implemented in the app:
-
-Local filtering for instant search
-
-Fetch queries for TMDB search
-
-ISR caching for movie details
-
-CRUD operations for admin
-
-Redirects for unauthorized users
-
-Clean modular structure for scalability
-
-🛠 Tech Stack
-
-Next.js 14
-
-React
-
-TailwindCSS
-
-TMDB API
-
-Next Image Optimization
-
-📁 Project Structure
+```
 src/
  ├── app/
  │   ├── components/
@@ -175,41 +146,49 @@ src/
  ├── lib/
  │   ├── config.js
  │   ├── moviesDB.js
+```
 
-📦 Installation
+---
+
+## Installation
+
+```bash
 npm install
 npm run dev
+```
 
-🔑 Environment Variables
+---
 
-Create .env.local and add the following:
+## Environment Variables
 
+Create a `.env.local` file:
+
+```
 NEXT_PUBLIC_TMDB_API_KEY=YOUR_KEY
 NEXT_PUBLIC_TMDB_BASE_URL=https://api.themoviedb.org/3
 NEXT_PUBLIC_TMDB_IMG=https://image.tmdb.org/t/p/w500
+```
 
-📌 Future Enhancements
+---
 
-Real authentication
+## Future Enhancements
 
-User accounts and favorites
+- Real authentication  
+- User accounts and favorites  
+- Genre filtering  
+- Infinite scroll  
 
-Genre filters
+---
 
-Infinite scroll
+## Project Purpose
 
-🎯 Project Purpose
+This project demonstrates:
 
-This project shows:
+- Building a full platform from scratch  
+- Controlling different rendering methods in Next.js  
+- Admin dashboard implementation  
+- API integration  
+- Clean and scalable folder structure  
+- Production-style workflows  
 
-Real experience with Next.js rendering modes
-
-Ability to build a full platform
-
-Strong understanding of UI development
-
-Clean code and modular structure
-
-Dashboard implementation similar to production apps
-
-It works as a strong portfolio piece for frontend job applications.
+It is a strong portfolio project for frontend roles.
