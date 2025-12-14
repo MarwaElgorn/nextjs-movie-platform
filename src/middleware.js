@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export function middleware(req) {
   const admin = req.cookies.get("admin")?.value;
 
-  if (admin !== "true") {
+  if (req.nextUrl.pathname.startsWith("/dashboard") && admin !== "true") {
     return NextResponse.redirect(new URL("/login", req.url));
   }
 
