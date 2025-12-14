@@ -1,4 +1,5 @@
 
+
 "use client";
 export const dynamic = "force-dynamic";
 
@@ -105,7 +106,7 @@ export default function SearchPage() {
         )}
 
         {q && results.length === 0 && !loading && (
-          <p className="text-gray-400">No results for "{q}"</p>
+          <p className="text-gray-400">No results for `{q}`</p>
         )}
 
         {results.length > 0 && (
